@@ -1,0 +1,20 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /admin1
+
+feign:
+  hystrix:
+    enabled: false
+
+financial:
+  common-url: "https://financialmodelingprep.com/api/v3"
+
+  dictionary:
+    url: "/company/stock/list"
+    key: "symbolsList"
+  price:
+    url: "/stock/real-time-price"
+    key: "stockList"
